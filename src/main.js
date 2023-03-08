@@ -9,5 +9,6 @@ Vue.config.productionTip = false,
 reqCatgoryList(),
 new Vue({
   router,
+  Vuex,
   render: h => h(App),
 }).$mount('#app')
