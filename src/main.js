@@ -1,8 +1,13 @@
 import Vue from 'vue'
 import App from './App.vue'
-
-Vue.config.productionTip = false
-
+import router from './router'
+import typeNav from '../src/pages/Home/typeNav/typeNav.vue'
+import  {reqCatgoryList} from './api/api'
+import Vuex from 'vuex'
+Vue.component(typeNav.name,typeNav)
+Vue.config.productionTip = false,
+reqCatgoryList(),
 new Vue({
+  router,
   render: h => h(App),
 }).$mount('#app')
